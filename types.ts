@@ -2,7 +2,8 @@ export enum AppView {
   HOME = 'HOME',
   AUTH = 'AUTH',
   PROFILE = 'PROFILE',
-  USERS = 'USERS'
+  USERS = 'USERS',
+  DESIGN = 'DESIGN'
 }
 
 export enum UserRole {

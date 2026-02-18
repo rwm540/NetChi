@@ -4,6 +4,7 @@ import { GlassAuth } from './components/GlassAuth';
 import { HeroSection } from './components/HeroSection';
 import { ProfileSection } from './components/ProfileSection';
 import { UsersManagement } from './components/UsersManagement';
+import { DesignSection } from './components/DesignSection';
 import { DesktopLayout } from './components/DesktopLayout';
 import { AppView, UserRole } from './types';
 import { Bell, Menu } from 'lucide-react';
@@ -49,6 +50,8 @@ const App: React.FC = () => {
         return <ProfileSection onLogout={handleLogout} />;
       case AppView.USERS:
         return <UsersManagement />;
+      case AppView.DESIGN:
+        return <DesignSection />;
       default:
         return <HeroSection />;
     }

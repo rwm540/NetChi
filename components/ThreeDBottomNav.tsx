@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Home, User, Users } from 'lucide-react';
+import { Home, User, Users, Palette } from 'lucide-react';
 import { AppView, UserRole } from '../types';
 
 interface Props {
@@ -14,11 +14,12 @@ export const ThreeDBottomNav: React.FC<Props> = ({ currentView, onChangeView, us
   const navItems = [
     { id: AppView.HOME, icon: Home, label: 'خانه' },
     { id: AppView.PROFILE, icon: User, label: 'پروفایل' },
+    { id: AppView.DESIGN, icon: Palette, label: 'طراحی' },
   ];
 
   // If user is a Provider (Cafe Net), insert the Admin/Users tab in the middle
   if (userRole === UserRole.PROVIDER) {
-    navItems.splice(1, 0, { id: AppView.USERS, icon: Users, label: 'پنل مدیریت' });
+    navItems.splice(2, 0, { id: AppView.USERS, icon: Users, label: 'پنل مدیریت' });
   }
 
   return (
